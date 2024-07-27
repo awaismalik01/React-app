@@ -2,7 +2,7 @@ name: MAIN
 
 on:
   push:
-    branches: [ main ]
+    branches: [ Development ]
 
 jobs:
   build:
@@ -17,6 +17,3 @@ jobs:
 
     - run: npm install
     - run: npm run test
-    
-    - name: Deploy to Vercel
-      run: vercel --prod --token oKUEuNVgtJZlnrhbyWuhNZ7q
