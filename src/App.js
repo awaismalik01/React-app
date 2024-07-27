@@ -1,12 +1,10 @@
 import logo from "./logo.svg";
 import "./App.css";
 import MainPage from "./components/mainPage/MainPage";
-import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
     <>
-      <Analytics />
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
