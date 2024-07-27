@@ -19,7 +19,7 @@ function App() {
           >
             Learn React
           </a>
-          <MainPage condition={0} />
+          <MainPage condition={1} />
         </header>
       </div>
     </>
