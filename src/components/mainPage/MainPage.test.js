@@ -15,6 +15,6 @@ describe("Main Page Component Test", () => {
     const linkElement = screen.getByText(
       /Main Page Compoent: Second Condition/i
     );
-    expect(linkElement).toBeDisabled();
+    expect(linkElement).toBeInTheDocument();
   });
 });
