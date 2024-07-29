@@ -1,11 +1,16 @@
-name: MAIN
+name: CI
 
 on:
   push:
     branches: [ Development ]
+    
+permissions:
+  contents: read
+  actions: read
+  checks: write
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,3 +27,11 @@ jobs:
       
     - name: Run Unit tests
       run: npm run test
+
+    - name: Test Report
+      uses: dorny/test-reporter@v1.9.1
+      if: success() || failure()
+      with:
+        name: JEST Tests
+        path: reports/test.xml
+        reporter: jest-junit
