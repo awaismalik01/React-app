@@ -1,1 +1,13 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="3" failures="0" errors="0" time="1.754">
+  <testsuite name="Main Page Component Test" errors="0" failures="0" skipped="0" timestamp="2024-07-29T20:55:45" time="0.863" tests="2">
+    <testcase classname="Main Page Component Test render MainPage true" name="Main Page Component Test render MainPage true" time="0.034">
+    </testcase>
+    <testcase classname="Main Page Component Test render MainPage false" name="Main Page Component Test render MainPage false" time="0.012">
+    </testcase>
+  </testsuite>
+  <testsuite name="App Component Test" errors="0" failures="0" skipped="0" timestamp="2024-07-29T20:55:45" time="0.879" tests="1">
+    <testcase classname="App Component Test renders learn react link" name="App Component Test renders learn react link" time="0.06">
+    </testcase>
+  </testsuite>
+</testsuites>
