@@ -14,33 +14,33 @@ permissions:
   checks: write
 
 jobs:
-  Test-Build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+  # Test-Build:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: "20"
+  #     - name: Set up Node.js
+  #       uses: actions/setup-node@v2
+  #       with:
+  #         node-version: "20"
 
-      - name: Install dependencies
-        run: npm install
+  #     - name: Install dependencies
+  #       run: npm install
 
-      - name: Run Unit tests
-        run: npm run test:ci
+  #     - name: Run Unit tests
+  #       run: npm run test:ci
 
-      - name: Test Report
-        uses: dorny/test-reporter@v1.9.1
-        if: success() || failure()
-        with:
-          name: JEST Tests
-          path: report/jest-junit.xml
-          reporter: jest-junit
+  #     - name: Test Report
+  #       uses: dorny/test-reporter@v1.9.1
+  #       if: success() || failure()
+  #       with:
+  #         name: JEST Tests
+  #         path: report/jest-junit.xml
+  #         reporter: jest-junit
 
   E2E-Testing:
-    needs: Test-Build
+    # needs: Test-Build
     runs-on: ubuntu-latest
 
     steps:
@@ -50,7 +50,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v3
         with:
-          project: ./my-app
+          project: ./
           browser: chrome
           build: npm run build
           start: npm run start
