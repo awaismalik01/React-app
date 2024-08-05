@@ -56,6 +56,12 @@ jobs:
           start: npm run start
           wait-on: "http://localhost:3000"
 
+      - name: Upload Mochawesome reports
+        uses: actions/upload-artifact@v4.3.5
+        with:
+          name: index
+          path: cypress/reports/html
+
   Deploy-Preview:
     needs: E2E-Testing
     runs-on: ubuntu-latest
