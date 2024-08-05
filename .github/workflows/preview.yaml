@@ -58,6 +58,7 @@ jobs:
 
       - name: Upload Mochawesome reports
         uses: actions/upload-artifact@v4.3.5
+        if: success() || failure()
         with:
           name: index
           path: cypress/reports/html
