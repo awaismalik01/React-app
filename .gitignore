@@ -8,6 +8,8 @@
 # testing
 /coverage
 /report
+cypress/reports
+cypress/screenshots
 
 # production
 /build
